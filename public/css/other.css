@@ -1,0 +1,173 @@
+/*Margins*/
+.mt-3{
+    margin-top: 3px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.mt-15{
+    margin-top: 15px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mt-25{
+    margin-top: 25px;
+}
+
+
+/*Other Style*/
+.join-btn{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+input, select {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+    padding: 5px 0;
+    color: #222;
+    margin-bottom: 31px;
+    font-family: 'Roboto Slab'; }
+input:focus, select:focus {
+    color: #222;
+    border-bottom: 2px solid #4966b1; }
+
+.label-agree-term {
+    color: #999; }
+
+input, select, textarea {
+    outline: none;
+    appearance: unset !important;
+    -moz-appearance: unset !important;
+    -webkit-appearance: unset !important;
+    -o-appearance: unset !important;
+    -ms-appearance: unset !important; }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    -o-appearance: none !important;
+    -ms-appearance: none !important;
+    margin: 0; }
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -ms-box-shadow: none !important; }
+
+
+/* Customize the label (the container) */
+.custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 22px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.custom:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom input:checked ~ .checkmark {
+    background-color: #f38e70;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.play-wraper{
+    margin-top: 25%;
+}
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+@media(max-width: 768px) {
+    .modal-dialog {
+        min-height: calc(100vh - 20px);
+    }
+}
+.modal-title{
+    Color:white;
+}
+.modal-header{
+    display: block;
+}
+.btn-resize {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width:30%;
+}
+.red-font{
+    color: #db2a2a;
+}
