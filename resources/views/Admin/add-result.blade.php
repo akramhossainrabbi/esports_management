@@ -48,6 +48,7 @@
                                                 <label for="player_one">{{$player_resut->game_user_name_one}} Kills</label>
                                                 <input type="number" class="form-control mb-2" name="player_one" id="player_one" placeholder="Kills" required>
                                                 <input type="hidden" name="match_id" value="{{$player_resut->match_id}}">
+                                                <input type="hidden" name="match_game_id" value="{{$player_resut->game_user_game_id}}" required>
                                                 <input type="hidden" name="joined_user_id" value="{{$player_resut->user_id}}">
                                                 <input type="hidden" name="users_joined_in_match_id" value="{{$player_resut->users_joined_in_match_id}}">
                                                 <input type="hidden" name="player_one_username" value="{{$player_resut->game_user_name_one}}">
@@ -81,6 +82,7 @@
                                                 <label for="player_two">{{$player_resut->game_user_name_two}} Kills</label>
                                                 <input type="number" class="form-control mt-2 mb-2" name="player_two" id="player_two" placeholder="Kills" required>
                                                 <input type="hidden" name="match_id" value="{{$player_resut->match_id}}">
+                                                <input type="hidden" name="match_game_id" value="{{$player_resut->game_user_game_id}}" required>
                                                 <input type="hidden" name="joined_user_id" value="{{$player_resut->user_id}}">
                                                 <input type="hidden" name="users_joined_in_match_id" value="{{$player_resut->users_joined_in_match_id}}">
                                                 <input type="hidden" name="player_one_username" value="{{$player_resut->game_user_name_one}}">
@@ -118,6 +120,7 @@
                                                 <label for="player_four">{{$player_resut->game_user_name_four}} Kills</label>
                                                 <input type="number" class="form-control mt-2 mb-2" name="player_four" id="player_four" placeholder="Kills" required>
                                                 <input type="hidden" name="match_id" value="{{$player_resut->match_id}}">
+                                                <input type="hidden" name="match_game_id" value="{{$player_resut->game_user_game_id}}" required>
                                                 <input type="hidden" name="joined_user_id" value="{{$player_resut->user_id}}">
                                                 <input type="hidden" name="users_joined_in_match_id" value="{{$player_resut->users_joined_in_match_id}}">
                                                 <input type="hidden" name="player_one_username" value="{{$player_resut->game_user_name_one}}">

@@ -94,6 +94,7 @@ class MatchPlayerSearchController extends Controller
         $match_result->player_four_kill=$request->player_four;
         $match_result->winner=$request->winner;
         $match_result->result_match_id=$request->match_id;
+        $match_result->result_game_id=$request->match_game_id;
 
         if ($match_result->save()){
             $match = AddMatch::where('match_id', $request->match_id)->first();

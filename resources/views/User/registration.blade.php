@@ -7,16 +7,11 @@
     <title>Sign Up</title>
 
     <link href="img/favicon.png" rel="icon">
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="{{asset('fonts')}}/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{asset('vendor')}}/bootstrap/css/bootstrap.min.css">
 
     <link href="{{asset('css')}}/style.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
 </head>
 <body>
 <style>
@@ -94,7 +89,7 @@
                         <div class="row">
                             <div class="col-md-12 mt-3 text-center">
                                 <label class="btn btn-dark" style="width: 30%; cursor: pointer;">
-                                            Upload<input class="inputfile" name="image" type='file' id="imgInp" style="width: 0px;height: 0px;overflow: hidden;" required />
+                                            Upload<input class="inputfile" name="image" type='file' id="imgInp" style="width: 0px;height: 0px;overflow: hidden;"/>
                                 </label>
                             </div>
                         </div>
@@ -127,7 +122,7 @@
         </div>
     </div>
 </div>
-
+<script src="{{asset('js')}}/ajax.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('#email').blur(function(){

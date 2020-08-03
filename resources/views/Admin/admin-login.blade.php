@@ -5,30 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/p_kvQ_icon.ico"/>
-    <!--===============================================================================================-->
+    <link href="img/favicon.png" rel="icon">
+    <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{asset('vendor')}}/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('fonts')}}/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('fonts')}}/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('vendor')}}/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('vendor')}}/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('vendor')}}/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('vendor')}}/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('vendor')}}/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('css')}}/util.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('css')}}/main.css">
-    <!--===============================================================================================-->
+
+    <link href="{{asset('css')}}/style.css" rel="stylesheet">
 </head>
 <body>
-
+{{-- 
 <div class="limiter">
     <div class="container-login" style="background-color: #49d8ef;">
         <div class="wrap-login p-l-55 p-r-55 p-t-65 p-b-54">
@@ -75,27 +59,81 @@
     </div>
 </div>
 
+ --}}
+<style>
+    body {
+        background: #ffd89b;
+        background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+        background: linear-gradient(to right, #ffd89b, #19547b);
+        min-height: 100vh;
+    }
+    .form-control{
+        border-radius: 10px;
+        margin-top: 30px;
+        -webkit-box-shadow: 0px 18px 98px -59px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 18px 98px -59px rgba(0,0,0,0.75);
+        box-shadow: 0px 18px 98px -59px rgba(0,0,0,0.75);
+    }
+    .btn-block{
+        border-radius: 10px;
+        margin-top: 15px;
+        background-color: #0360c5;
+        color: white;
+        font-weight: bold;
+    }
+    #page-content {
+        flex: 1 0 auto;
+    }
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .card{
+        border-radius: 5px;
+    }
+</style>
 
-<!--===============================================================================================-->
-<script src="{{asset('vendor')}}/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="{{asset('vendor')}}/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-<script src="{{asset('vendor')}}/bootstrap/js/popper.js"></script>
-<script src="{{asset('vendor')}}/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="{{asset('vendor')}}/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-<script src="{{asset('vendor')}}/daterangepicker/moment.min.js"></script>
-<script src="{{asset('vendor')}}/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-<script src="{{asset('vendor')}}/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-<script src="{{asset('js')}}/main.js"></script>
-<script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
+<div id="page-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 vertical-center">
+                <div class="container">
+                    <div class="card mt-auto">
+                        <div class="card-body">
+                           <form method="POST" action="/esport.admin.login.panel">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h1><a href="/" class="scrollto" style="font-weight: bold;">Admin</a></h1>
+                                    </div>
+                                </div>
+                                @if(session('message'))
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <strong>Woops !</strong> {{session('message')}}
+                                    </div>
+                                @endif
+                                @if(session('message2'))
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <strong>Congrats!</strong> {{session('message2')}}
+                                    </div>
+                                @endif
+                                <div class="form-group-1" style="">
+                                    <input type="text" class="form-control" name="admin_username" placeholder="Type your username" required>
+                                    <input type="password" class="form-control" name="password" placeholder="Type your password" required>
+                                </div>
+                                <div class="form-submit">
+                                    <input type="submit" class="btn btn-dark mt-3 mb-5" class="btn btn-primary btn-block" value="Login" style="width: 100%;" />
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

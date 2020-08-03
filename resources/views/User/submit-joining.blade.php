@@ -33,7 +33,7 @@
                     @endif
                     @if(session('message3'))
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Oops !</strong> {{session('message3')}}. <strong><a href="{{route('user.transactionView')}}">Click here to add money to your account.</a></strong>
+                            <strong>Oops !</strong> {{session('message3')}}. <strong><a href="{{route('user.profileView')}}">Click here to add money to your account.</a></strong>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -78,6 +78,7 @@
                                                     <input type="submit" name="submit" id="submit" class="btn btn-primary btn-block" value="Join" />
                                                 </div>
                                                 <input type="hidden" name="match_id" value="{{$Match->match_id}}">
+                                                <input type="hidden" name="match_game_id" value="{{$Match->match_game_id}}">
                                             </form>
                                         </div>
                                     </div>
@@ -100,7 +101,9 @@
                                             <form method="POST" action="/join/match/{id}" class="appointment-form" id="appointment-form" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="form-group-1">
-                                                    <h5 style="color: red">Add {{$datas->game_name}} User Name</h5>
+                                                    <h5 style="color: red">Give your team a Name</h5>
+                                                    <input type="text" class="form-control" name="game_user_team_name" id="game_user_team_name" placeholder="Your Team Name" required />
+                                                    <h5 style="color: red; margin-top: 5px;">Add {{$datas->game_name}} User Name</h5>
                                                     <input type="text" class="form-control" name="game_user_name_one" id="game_user_name_one" placeholder="Player one Username" required />
                                                     <input type="text" class="form-control mt-3" name="game_user_name_two" id="game_user_name_two" placeholder="Player two Username" required />
                                                 </div>
@@ -109,6 +112,7 @@
                                                     <input type="submit" name="submit" id="submit" class="btn btn-primary btn-block" value="Join" />
                                                 </div>
                                                 <input type="hidden" name="match_id" value="{{$Match->match_id}}">
+                                                <input type="hidden" name="match_game_id" value="{{$Match->match_game_id}}">
                                             </form>
                                         </div>
                                     </div>
@@ -131,7 +135,9 @@
                                             <form method="POST" action="/join/match/{id}" class="appointment-form" id="appointment-form" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="form-group-1">
-                                                    <h5 style="color: red">Add {{$datas->game_name}} User Name</h5>
+                                                    <h5 style="color: red">Give your team a Name</h5>
+                                                    <input type="text" class="form-control" name="game_user_team_name" id="game_user_team_name" placeholder="Your Team Name" required />
+                                                    <h5 style="color: red; margin-top: 5px;">Add {{$datas->game_name}} User Name</h5>
                                                     <input type="text" class="form-control" name="game_user_name_one" id="game_user_name_one" placeholder="Player one Username" required />
                                                     <input type="text" class="form-control mt-3" name="game_user_name_two" id="game_user_name_two" placeholder="Player two Username" required />
                                                     <input type="text" class="form-control mt-3" name="game_user_name_three" id="game_user_name_three" placeholder="Player three Username" required />
@@ -142,6 +148,7 @@
                                                     <input type="submit" name="submit" id="submit" class="btn btn-primary btn-block" value="Join" />
                                                 </div>
                                                 <input type="hidden" name="match_id" value="{{$Match->match_id}}">
+                                                <input type="hidden" name="match_game_id" value="{{$Match->match_game_id}}">
                                             </form>
                                         </div>
                                     </div>

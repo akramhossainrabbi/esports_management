@@ -10,23 +10,24 @@ use Illuminate\Http\Request;
 
 class ResultController extends Controller
 {
-    public function resultView(Request $request)
+    public function resultView(Request $request, $id)
     {
-        $matchs = StoreMatch::leftjoin('all_games','game_id','store_match.match_game_id')->take(50)->orderBy('store_match_id','desc')->get();
+        $matchs = StoreMatch::leftjoin('all_games','game_id','store_match.match_game_id')->where('match_game_id', $id)->take(50)->orderBy('store_match_id','desc')->get();
         $User= AppUser::where('user_id',$request->session()->get('loggedUser'))->get();
         return view('User.result')
             ->with('matchs',$matchs)
-            ->with('users',$User);
+            ->with('users',$User)
+            ->render();
     }
 
     public function searchResult(Request $request)
     {
         if ($request->ajax()) {
             $output = "";
-            $searched = $request->search;
+            $searched = $request->req;
             $data = StoreMatch::where('store_match_id', $searched)->first();
             $results = GameResult::where('result_match_id', $searched)->get();
-            if ($data) {
+            if ($results) {
                 $output .= '<div class="row mt-3 bg-yellow">' .
                     '<div class="col-12 pt-1 pb-1 text-center">' .
                     '<strong>WINNER OF THE MATCH</strong>' .
@@ -187,6 +188,8 @@ class ResultController extends Controller
                 }
 
                 $output .= '</tbody></table></div></div>';
+            }else{
+                $output .= '<span class="text-center"><strong>Result not Published!</strong></span>';
             }
             return Response($output);
         }

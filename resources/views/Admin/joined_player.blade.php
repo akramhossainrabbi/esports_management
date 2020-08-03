@@ -116,7 +116,7 @@
                                         <td>{{$player->game_user_name_three}}</td>
                                         <td>{{$player->game_user_name_four}}</td>
                                         <td>{{$player->match_code}}</td>
-                                        <td><a href="{{route('admin.addKillView', [$player->joined_user_id])}}"><i class="fab fa-bitcoin"></i></a></td>
+                                        <td><a href="{{route('admin.addKillView', [$player->joined_user_id])}}"><i class="fa fa-bitcoin"></i></a></td>
                                     </tr>
                                 @else
                                     <div class="text-center">

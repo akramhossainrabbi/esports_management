@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Hash;
 use App\AppUser;
+use App\AppUserBalance;
 
 class RegistrationController extends Controller
 {
@@ -40,10 +41,16 @@ class RegistrationController extends Controller
       $User->user_username=$request->username;
       $User->user_email=$request->email;
       $User->mobile=$request->mobile;
-      $User->user_password=Hash::make($request->password);
-      $User->save();
-      $request->session()->flash('message2','Registration successful. Login here.');
-      return redirect('/login');
+      $User->user_password=Hash::make($request->password);  
+      if ($User->save()) {
+        $user_balance = new AppUserBalance;
+
+        $user_balance->balance_user_id = $User->user_id;
+        $user_balance->balance_amount = '.25';
+        $user_balance->save();
+        $request->session()->flash('message2','Registration successful. Login here.');
+        return redirect('/login');
+      }
     }
     public function usernameCheck(Request $request)
     {

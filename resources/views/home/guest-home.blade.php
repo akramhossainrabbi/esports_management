@@ -38,9 +38,9 @@
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">ESPORTS BD</a></h1>
+        <h1><a href="#intro" class="scrollto">E-SPORTS BD</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+         {{-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a> --}}
       </div>
 
       <nav id="nav-menu-container">
@@ -553,11 +553,17 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Esports-BD</strong>. All Rights Reserved
+        &copy; Copyright <strong>E-SPORTS BD</strong>. All Rights Reserved
       </div>
-{{--       <div class="credits">
-        Designed by <a href="">CoderFoxBD</a>
-      </div> --}}
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
   </footer><!-- #footer -->
 

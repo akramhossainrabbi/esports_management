@@ -186,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    <script type="text/javascript">
+                    <script>
                         $(document).ready(function() {
                             $('#search{{$i}}').click(function(){
                                 $value=$('#value{{$i}}').val();
@@ -196,20 +196,27 @@
                                     $("#result{{$i}}").toggleClass('show');
                                 }
                                 $.ajax({
-                                    type : 'get',
-                                    url : '{{ route('user.searchResult') }}',
-                                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                                    data:{'search':$value},
-                                    beforeSend: function(){
+                                   type:'GET',
+                                   url : '{{ route('user.searchResult', [$match->match_game_id]) }}',
+                                   cache: false,
+                                   headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                                   data:{'req': $value},
+                                   beforeSend: function(){
                                         // Show image container
                                         $("#loader{{$i}}").show();
                                     },
-                                    success:function(data){
-                                        $('#result{{$i}}').html(data);
-                                    },
-                                    complete:function(data){
+                                   success:function(response) {
+                                      $("#result{{$i}}").html(response);
+                                      console.log(response);
+                                   },
+                                   complete:function(data){
                                         // Hide image container
                                         $("#loader{{$i}}").hide();
+                                    },
+                                   error: function(jqxhr, textStatus, errorThrown) {
+                                      console.log("jqXHR: ", jqxhr);
+                                      console.log("textStatus: ", textStatus);
+                                      console.log("errorThrown: ", errorThrown);
                                     }
                                 });
                             });

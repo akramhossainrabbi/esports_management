@@ -67,7 +67,9 @@ class SubmitJoiningReqController extends Controller
                        $JoinMatch = new AppMatchJoinedPlayer();
 
                         $JoinMatch->joined_user_id=$User->user_id;
+                        $JoinMatch->game_user_game_id=$request->match_game_id;
                         $JoinMatch->match_id=$request->match_id;
+                        $JoinMatch->game_user_team_name=$request->game_user_team_name;
                         $JoinMatch->game_user_name_one=$request->game_user_name_one;
                         $JoinMatch->game_user_name_two=$request->game_user_name_two;
                         $JoinMatch->game_user_name_three=$request->game_user_name_three;

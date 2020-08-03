@@ -88,7 +88,7 @@
                 <div class="modal-body">
                     <form action="/esport.admin.login.panel/users" method="POST">
                         @csrf
-                        <input type="text" class="form-control" name="amount" placeholder="Amount" required>
+                        <input type="number" class="form-control" name="amount" placeholder="Amount" required>
                         <input type="password" class="form-control mt-3 mb-3" name="password" placeholder="Confirm your Password" required>
                         @if($searched_user)
                             <input type="hidden" name="user_id" value="{{$searched_user->user_id}}">

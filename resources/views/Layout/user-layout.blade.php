@@ -36,31 +36,28 @@
   <!--==========================
     Header
   ============================-->
-
   <header id="header">
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="{{route('user.userHomeView')}}" class="scrollto">ESPORTS BD</a></h1>
+        <h1><a href="{{route('user.userHomeView')}}" class="scrollto">E-SPORTS BD</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+         {{-- <a href="{{route('user.userHomeView')}}"><img src="img/logo.png" alt="" title="" /></a> --}}
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="{{route('user.userHomeView')}}">Home</a></li>
+          <li><a href="{{route('user.userHomeView')}}">Game</a></li>
           <li><a href="{{route('user.profileView')}}">Profile</a></li>
-          <li><a href="{{route('user.resultView')}}">Results</a></li>
-          <li><a href="{{route('user.logout')}}">Logout</a></li>
-          <!-- <li class="menu-has-children"><a href="">Drop Down</a>
+          <li class="menu-has-children"><a style="color: white">Results</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+              <li><a href="{{route('user.resultView', 1)}}">Pubg</a></li>
+              <li><a href="{{route('user.resultView', 2)}}">FreeFire</a></li>
+              <li><a href="{{route('user.resultView', 3)}}">Call of Duty</a></li>
             </ul>
-          </li> -->
+          </li>
           {{-- <li><a href="#contact">Contact</a></li> --}}
+          <li><a href="{{route('user.logout')}}">Logout</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -138,7 +135,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Esports-BD</strong>. All Rights Reserved
+        &copy; Copyright <strong>E-SPORTS BD</strong>. All Rights Reserved
       </div>
 {{--       <div class="credits">
         Designed by <a href="">CoderFoxBD</a>

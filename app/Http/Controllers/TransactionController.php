@@ -68,7 +68,7 @@ class TransactionController extends Controller
                     }
                 }
             }elseif($balance->balance_amount==$request->amount_withdraw){
-                $request->session()->flash('message2',"You can't withdraw the hole amount!");
+                $request->session()->flash('message2',"You can't withdraw that .25 Taka!");
                 return back();
             }else{
                 $request->session()->flash('message2','You have insufficient balance!');

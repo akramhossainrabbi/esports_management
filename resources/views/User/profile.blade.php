@@ -115,7 +115,11 @@
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="margin-top: 13%;">
           <div class="row">
             <div class="col-md-12 text-center">
-              <img src="{{ asset('images') }}/user_image/{{$users->image}}" alt="" class="circle-img center-img img-fluid" style="height: 160px; width: 160px; margin-top: 5%">
+              @if($users->image)
+                <img src="{{ asset('images') }}/user_image/{{$users->image}}" alt="" class="circle-img center-img img-fluid" style="height: 160px; width: 160px; margin-top: 5%">
+              @else
+                  <img src="{{ asset('images') }}/user_image/placeholder.png" alt="" class="circle-img center-img img-fluid" style="height: 160px; width: 160px; margin-top: 5%">
+              @endif
               <h3 class="mt-3" style="font-weight: bold;">{{$users->user_first_name}} {{$users->user_last_name}}</h3>
             </div>
           </div>  
