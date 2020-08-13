@@ -346,7 +346,7 @@
 
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp">
+          <div class="col-lg-4 col-md-6 wow fadeInUp">
             <div class="member">
               <img src="img/team-1.jpg" class="img-fluid" alt="">
               <div class="member-info">
@@ -364,25 +364,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Mehedi Hasan Shovon</h4>
-                  <span>Chief Marketing Officer</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
               <img src="img/team-3.jpg" class="img-fluid" alt="">
               <div class="member-info">
@@ -400,7 +382,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
               <img src="img/team-4.jpg" class="img-fluid" alt="">
               <div class="member-info">
@@ -511,7 +493,7 @@
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="{{ route('guest.services') }}">Services</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="{{ route('guest.terms') }}">Terms of service</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="{{ route('guest.privacy') }}">Privacy policy</a></li>
             </ul>

@@ -95,6 +95,10 @@
             margin-top: 25%;
             min-height: 100vh;
         }
+        .modal-content{
+            background: transparent;
+            border: none;
+        }
     </style>
     <div class="play-wraper">
         <div class="row">
@@ -170,7 +174,7 @@
                                 </div>
                                 <div class="row mt-1">
                                     <div class="col-12 text-center">
-                                        <a class="btn btn-resize" style="color:white">Watch</a>
+                                        <a class="btn btn-resize" style="color:white" data-toggle="modal" data-target="#target{{$i}}">Watch</a>
                                         <input type="hidden" id="value{{$i}}" value="{{$match->store_match_id}}">
                                         <a class="btn btn-resize" id="search{{$i}}" style="color:white">Result</a>
                                     </div>
@@ -222,6 +226,16 @@
                             });
                         });
                     </script>
+                    <!-- Modal -->
+                        <div class="modal" id="target{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe width="853" height="480" src="https://www.youtube.com/embed/76QOT-1ryKI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                 @endforeach
             </div>
         </div>

@@ -38,5 +38,13 @@ class GuestHomeController extends Controller
     {
       return view('home.terms_and_conditions');
     }
+    public function Services(Request $request)
+    {
+        return view('home.services');
+    }
+    public function AboutUs(Request $request)
+    {
+        return view('home.about_us');
+    }
 
 }

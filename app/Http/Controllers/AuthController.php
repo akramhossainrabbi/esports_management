@@ -98,6 +98,7 @@ class AuthController extends Controller
             $update_password->user_password=Hash::make($request->password);
             $update_password->save();
             UserPassReset::where('passwordtoken',$request->code)->delete();
+            $request->session()->flash('message2','Password reseted successfully!');
             return redirect('/login');
         }else{
             $request->session()->flash('message','This email does not exist!');

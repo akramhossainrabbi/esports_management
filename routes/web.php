@@ -14,6 +14,8 @@ Route::get('/','GuestHomeController@guestView')->name('guest.home');
 Route::post('/','GuestHomeController@contactSend')->name('guest.contact');
 Route::get('/privacy_policy','GuestHomeController@PrivacyPolicy')->name('guest.privacy');
 Route::get('/terms_and_condition','GuestHomeController@TermsConditions')->name('guest.terms');
+Route::get('/services','GuestHomeController@Services')->name('guest.services');
+Route::get('/about-us','GuestHomeController@AboutUs')->name('guest.about-us');
 Route::get('/login','LoginController@loginView')->name('user.login');
 Route::post('/login','LoginController@logUserVarify')->name('user.logUserVarify');
 Route::get('/register','RegistrationController@registrationView')->name('user.registrationView');

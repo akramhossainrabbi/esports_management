@@ -57,7 +57,7 @@ class TransactionController extends Controller
                         $number = $request->mobile_number;
                         $amount_withdraw =$request->amount_withdraw;
                         $withdraw_method = $request->withdow_method;
-                        $to_mail = 'playformoneyweb@gmail.com';
+                        $to_mail = 'esportsbdmail@gmail.com';
                         $data=array("name"=>$name,"username"=>$username,"number"=>$number,"amount_to_add"=>$amount_withdraw,"withdraw_method"=>$withdraw_method);
                         Mail::send('password.withdraw-notification',$data,function ($message) use ($name,$to_mail,$username,$number,$amount_withdraw,$withdraw_method){
                             $message->to($to_mail)
